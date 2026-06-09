@@ -14,7 +14,7 @@ const responsiveOptions = ref([
 
 const cargarProyectos = async () => {
     try {
-        const respuesta = await fetch('http://127.0.0.1:8000/proyectos/');
+        const respuesta = await fetch('/api/proyectos/');
         if (respuesta.ok) {
             proyectos.value = await respuesta.json();
         }
