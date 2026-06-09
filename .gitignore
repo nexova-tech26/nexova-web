@@ -1,0 +1,18 @@
+# Dependencias de Frontend
+node_modules/
+dist/
+.DS_Store
+.vscode/
+
+# Dependencias de Backend
+.venv/
+env/
+backend/nexova-web/
+__pycache__/
+*.pyc
+
+# Archivos multimedia y subidas del CMS
+backend/uploads/
+
+# Variables de entorno y secretos
+.env
