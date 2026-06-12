@@ -15,50 +15,52 @@ const scrollTo = (idDestino) => {
             
             <div class="grid-principal">
                 
-                <div class="contenido-texto">
+                <div class="contenido-texto" data-aos="fade-right">
                     <span class="etiqueta-nexova">Nuestro ADN</span>
                     <h2>Desbloqueamos el verdadero<br> potencial de tu empresa.</h2>
                     
-                    <p style="text-align: start;" class="parrafo-principal">
-                        La tecnología no debería ser un dolor de cabeza, debería ser lo que te hace crecer. En <strong>Nexova</strong> convertimos lo técnico en resultados concretos: más clientes, procesos más rápidos y un negocio que funciona aunque no estés mirando.
-                    </p>
-                    <p style="text-align: start;" class="parrafo-principal">
-                        No importa si estás empezando o si ya tienes un negocio consolidado. Te acompañamos en cada paso.
+                    <p class="parrafo-principal">
+                       En <strong>Nexova Tech</strong> convertimos lo técnico en resultados concretos: procesos más rápidos y un negocio que funciona aunque no estés mirando.
                     </p>
 
-                    <!-- <ul class="lista-beneficios">
-                        <li><i class="pi pi-check-circle"></i> Construido para crecer: lo que hacemos hoy no te queda pequeño mañana</li>
-                        <li><i class="pi pi-check-circle"></i> Tu información, siempre protegida: porque los datos de tu empresa no son un riesgo que debas correr.</li>
-                        <li><i class="pi pi-check-circle"></i> Siempre al tanto: sabes en qué vamos, cuándo entregamos y cómo va tu proyecto sin tener que preguntar.</li>
-                    </ul> -->
+                    <ul class="lista-beneficios">
+                        <li>
+                            <div class="icono-check"><i class="pi pi-check"></i></div>
+                            <span><strong>Escalabilidad:</strong> Lo que hacemos hoy no te queda pequeño mañana.</span>
+                        </li>
+                        <li>
+                            <div class="icono-check"><i class="pi pi-check"></i></div>
+                            <span><strong>Acompañamiento:</strong> Te guiamos en cada paso.</span>
+                        </li>
+                    </ul>
 
                     <Button label="Hablemos de tu proyecto" 
                             icon="pi pi-comments"
                             size="large" 
-                            class="boton-contacto"
+                            class="boton-contacto btn-primary-nexova"
                             @click="scrollTo('contacto')" />
                 </div>
 
-                <div class="grid-metricas">
+                <div class="grid-metricas" data-aos="fade-left">
                     
                     <div class="metrica-card oscura">
                         <i class="pi pi-sync"></i>
-                        <h3>Entregas que puedes ver</h3>
-                        <p>Te mostramos avances reales en cada etapa. Nada de sorpresas al final.</p>
+                        <h3>Transparencia total</h3>
+                        <p>Te mostramos avances reales en cada etapa. Cero sorpresas al final del proyecto.</p>
                     </div>
 
-                    <div class="metrica-card clara">
+                    <div class="metrica-card acento-verde">
                         <i class="pi pi-shield"></i> 
                         <h3>Tu data bajo llave</h3>
-                        <p>Aplicamos estándares corporativos para proteger la información de tu empresa.</p>
+                        <p>Estándares estrictos para proteger la información vital de tu operación.</p>
                     </div>
 
                     <div class="metrica-card destacada">
                         <div class="destacada-contenido">
                             <span class="numero-grande">360°</span>
                             <div class="destacada-texto">
-                                <h3>Una sola empresa, todo resuelto</h3>
-                                <p>Web, software, soporte técnico y mantenimiento. No necesitas buscar a nadie más.</p>
+                                <h3>Todo resuelto en un solo lugar</h3>
+                                <p>Web, software a medida, soporte y mantenimiento continuo. Nos encargamos de la infraestructura para que tú te enfoques en el negocio.</p>
                             </div>
                         </div>
                     </div>
@@ -73,9 +75,10 @@ const scrollTo = (idDestino) => {
 <style scoped>
 /* 1. CONTENEDOR Y FONDOS */
 .adn-nexova {
-    background-color: #ffffff; /* Blanco puro para descansar la vista */
-    padding: 7rem 2rem;
+    background-color: #ffffff; 
+    padding: 8rem 2rem;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
 
 .contenedor {
@@ -83,87 +86,107 @@ const scrollTo = (idDestino) => {
     margin: 0 auto;
 }
 
-/* 2. LAYOUT PRINCIPAL: Dividimos la pantalla en 2 mitades */
+/* 2. LAYOUT PRINCIPAL */
 .grid-principal {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.1fr; /* Le damos un poco más de espacio a las tarjetas */
+    gap: 5rem;
     align-items: center;
 }
 
-/* 3. TIPOGRAFÍA Y TEXTOS (Columna Izquierda) */
+/* 3. TIPOGRAFÍA Y TEXTOS */
 .etiqueta-nexova {
-    color: #0F8B58; /* Verde Nexova */
+    color: #0F8B58; 
     font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    display: block;
-    margin-bottom: 1.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(15, 139, 88, 0.1);
+    border-radius: 20px;
 }
 
 .contenido-texto h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
     color: #0f172a;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
 }
 
 .parrafo-principal {
-    font-size: 1.2rem;
-    color: #334155;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.parrafo-secundario {
-    font-size: 1.1rem;
-    color: #64748b;
+    font-size: 1.15rem;
+    color: #475569;
     line-height: 1.7;
     margin-bottom: 2rem;
 }
 
-/* 4. LISTA DE BENEFICIOS */
+/* 4. LISTA DE BENEFICIOS (Rediseñada) */
 .lista-beneficios {
     list-style: none;
     padding: 0;
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .lista-beneficios li {
     display: flex;
-    align-items: start;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 1rem;
     font-size: 1.05rem;
-    color: #475569;
-    margin-bottom: 0.8rem;
+    color: #334155;
+    line-height: 1.5;
 }
 
-.lista-beneficios i {
-    color: #0F8B58; /* Chulos (checks) en Verde Nexova */
-    font-size: 1.2rem;
+.icono-check {
+    background-color: #0F8B58;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+    box-shadow: 0 4px 10px rgba(15, 139, 88, 0.3);
 }
 
-.boton-contacto {
-    margin-top: 1rem;
+/* Ajuste del botón */
+:deep(.btn-primary-nexova) {
+    background-color: #0F8B58;
+    border-color: #0F8B58;
+    transition: all 0.3s ease;
+    border-radius: 8px;
 }
 
-/* 5. CUADRÍCULA DERECHA (Métricas y ADN) */
+:deep(.btn-primary-nexova:hover) {
+    background-color: #0b6b43;
+    border-color: #0b6b43;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -6px rgba(15, 139, 88, 0.6);
+}
+
+/* 5. CUADRÍCULA DERECHA (Bento Box Style) */
 .grid-metricas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .metrica-card {
-    padding: 2rem;
-    border-radius: 16px;
+    padding: 2.2rem 1.8rem;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .metrica-card:hover {
@@ -171,65 +194,55 @@ const scrollTo = (idDestino) => {
 }
 
 .metrica-card i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .metrica-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .metrica-card p {
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
+    opacity: 0.9;
 }
 
-/* Estilos específicos de cada tarjeta para crear un "Patrón de Tablero" */
+/* Tarjeta Oscura Neutra */
 .oscura {
-    background: linear-gradient(
-        to bottom right,
-        #0f172a 0%,
-        #0c1a3a 40%,
-        #0e2a45 70%,
-        #0f172a 100%
-    ); /* Azul corporativo muy oscuro */
+    background-color: #18181b; /* Gris casi negro, muy elegante */
+    border: 1px solid #27272a;
     color: white;
-    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.oscura i { color: #BCE4D3; /* Verde Menta para contrastar */ }
-.oscura p { color: #eaf6f0; }
+.oscura i { color: #34d399; } /* Icono verde claro */
+.oscura p { color: #a1a1aa; }
 
-.clara {
-    background: linear-gradient(
-        to bottom right,
-        #0f172a 0%,
-        #0c1a3a 40%,
-        #0e2a45 70%,
-        #0f172a 100%
-    ); /* Azul corporativo muy oscuro */
+/* Tarjeta Acento (Totalmente Verde Corporativo) */
+.acento-verde {
+    background: linear-gradient(135deg, #0F8B58 0%, #0b6b43 100%);
     color: white;
-    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(15, 139, 88, 0.2);
 }
 
-.clara i { color: #0F8B58; }
-.clara p { color: #ffffff; }
+.acento-verde i { color: #ffffff; }
+.acento-verde p { color: #eaf6f0; }
 
-/* La tarjeta destacada ocupa todo el ancho inferior (span 2) */
+/* Tarjeta Destacada Inferior */
 .destacada {
     grid-column: span 2;
-    background: linear-gradient(
-        to bottom right,
-        #0f172a 0%,
-        #0c1a3a 40%,
-        #0e2a45 70%,
-        #0f172a 100%
-    ); /* Azul corporativo muy oscuro */
-    color: white;
-    padding: 2.5rem 2rem;
+    background-color: #fafafa;
+    border: 1px solid #e4e4e7;
+    color: #0f172a;
+}
+
+.destacada:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
 }
 
 .destacada-contenido {
@@ -239,33 +252,46 @@ const scrollTo = (idDestino) => {
 }
 
 .numero-grande {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 900;
-    color: #34d399; /* Verde vibrante */
+    color: #0F8B58; 
     line-height: 1;
+    letter-spacing: -2px;
 }
 
-.destacada-texto p { color: #ffffff; }
+.destacada-texto p { color: #475569; }
 
-/* 6. RESPONSIVO (Móviles y Tablets) */
+/* 6. RESPONSIVO */
 @media (max-width: 992px) {
     .grid-principal {
-        grid-template-columns: 1fr; /* Pasa a 1 sola columna */
-        gap: 3rem;
+        grid-template-columns: 1fr; 
+        gap: 4rem;
     }
-    .destacada-contenido {
-        flex-direction: column;
+    .contenido-texto {
         text-align: center;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lista-beneficios li {
+        text-align: left;
     }
 }
 
 @media (max-width: 576px) {
+    .adn-nexova {
+        padding: 5rem 1.5rem;
+    }
     .grid-metricas {
-        grid-template-columns: 1fr; /* Las tarjetitas también pasan a 1 columna */
+        grid-template-columns: 1fr; 
     }
     .destacada {
         grid-column: span 1;
+    }
+    .destacada-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
 }
 </style>

@@ -15,36 +15,35 @@ const navegarA = (idDestino) => {
 
 <template>
     <footer class="footer-premium">
-        <!-- Borde superior decorativo -->
         <div class="linea-gradiente"></div>
 
         <div class="contenedor-footer">
             
-            <!-- SECCIÓN PRINCIPAL: Cuadrícula de 3 columnas -->
             <div class="grid-footer">
                 
-                <!-- Columna 1: Marca y Propuesta de Valor -->
                 <div class="col-marca">
                     <div class="logo-nexova" @click="navegarA('top')">
                         <span class="letra-n">N</span>
                         <span class="texto-logo">Nexova Tech</span>
                     </div>
                     <p class="descripcion-marca">
-                        Tecnología que impulsa tu negocio.
+                        Tecnología estratégica. Diseñamos soluciones digitales que impulsan y escalan tu negocio.
                     </p>
                     <div class="redes-sociales">
-                        <a href="https://web.facebook.com/profile.php?id=61589231953639" aria-label="LinkedIn" class="icono-red"><i class="pi pi-facebook"></i></a>
-                        <a href="https://www.instagram.com/nexova_tech/" aria-label="GitHub" class="icono-red"><i class="pi pi-instagram"></i></a>
-                        <a href="https://wa.me/573209238674" target="_blank" aria-label="Twitter" class="icono-red"><i class="pi pi-whatsapp"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61589231953639" target="_blank" aria-label="Facebook" class="icono-red"><i class="pi pi-facebook"></i></a>
+                        <a href="https://www.instagram.com/nexova_tech/" target="_blank" aria-label="Instagram" class="icono-red"><i class="pi pi-instagram"></i></a>
+                        <a href="https://wa.me/573209238674" target="_blank" aria-label="WhatsApp" class="icono-red"><i class="pi pi-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- Columna 2: Navegación Rápida -->
                 <div class="col-links">
                     <h4 class="titulo-columna">Explorar</h4>
                     <nav class="nav-footer">
                         <a href="#inicio" @click.prevent="navegarA('top')" class="link-footer">
                             <i class="pi pi-angle-right"></i> Inicio
+                        </a>
+                        <a href="#nosotros" @click.prevent="navegarA('nosotros')" class="link-footer">
+                            <i class="pi pi-angle-right"></i> Nuestro ADN
                         </a>
                         <a href="#servicios" @click.prevent="navegarA('servicios')" class="link-footer">
                             <i class="pi pi-angle-right"></i> Soluciones IT
@@ -55,25 +54,23 @@ const navegarA = (idDestino) => {
                     </nav>
                 </div>
 
-                <!-- Columna 3: Contacto Directo -->
                 <div class="col-contacto">
                     <h4 class="titulo-columna">Contacto</h4>
                     <ul class="lista-contacto">
                         <li>
                             <i class="pi pi-envelope icono-verde"></i>
-                            <a href="mailto:contacto.nexovatech@gmail.com">contacto.nexova@gmail.com</a>
+                            <a href="mailto:contacto.nexovatech@gmail.com">contacto.nexovatech@gmail.com</a>
                         </li>
                         <li>
                             <i class="pi pi-whatsapp icono-verde"></i>
-                            <a href="https://wa.me/573209238674" target="_blank">+57 3209238674</a>
+                            <a href="https://wa.me/573209238674" target="_blank">+57 320 923 8674</a>
                         </li>
                         <li>
                             <i class="pi pi-map-marker icono-verde"></i>
-                            <span>Colombia</span>
+                            <span>Villavicencio, Meta<br><small style="color: #64748b;">Colombia</small></span>
                         </li>
                     </ul>
                     
-                    <!-- Botón de acción final -->
                     <button class="btn-footer-cta" @click="navegarA('contacto')">
                         Agendar Consultoría
                     </button>
@@ -81,17 +78,11 @@ const navegarA = (idDestino) => {
 
             </div>
 
-            <!-- SECCIÓN INFERIOR: Copyright y Legales -->
             <div class="footer-inferior">
                 <div class="copyright">
                     &copy; 2026 Nexova Tech. Todos los derechos reservados.
                 </div>
-                <!-- <div class="links-legales">
-                    <a href="#">Términos de Servicio</a>
-                    <span class="separador">•</span>
-                    <a href="#">Políticas de Privacidad</a>
-                </div> -->
-            </div>
+                </div>
 
         </div>
     </footer>
@@ -100,21 +91,21 @@ const navegarA = (idDestino) => {
 <style scoped>
 /* === ESTRUCTURA GLOBAL === */
 .footer-premium {
-    background-color: #020617; /* Tono ultra oscuro para máxima elegancia */
+    background-color: #09090b; /* Negro profundo corporativo, adiós azul */
     color: #e2e8f0;
     font-family: 'Inter', sans-serif;
     position: relative;
     padding-top: 2rem;
 }
 
-/* Línea de gradiente superior para separar sutilmente de la sección anterior */
+/* Línea de gradiente superior */
 .linea-gradiente {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, #020617 0%, #0F8B58 50%, #020617 100%);
+    background: linear-gradient(90deg, #09090b 0%, #0F8B58 50%, #09090b 100%);
 }
 
 .contenedor-footer {
@@ -159,6 +150,7 @@ const navegarA = (idDestino) => {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(15, 139, 88, 0.3);
 }
 
 .texto-logo {
@@ -169,7 +161,7 @@ const navegarA = (idDestino) => {
 }
 
 .descripcion-marca {
-    color: #94a3b8;
+    color: #a1a1aa;
     line-height: 1.7;
     font-size: 0.95rem;
     margin-bottom: 2rem;
@@ -185,10 +177,11 @@ const navegarA = (idDestino) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #94a3b8;
+    width: 40px;
+    height: 40px;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    color: #a1a1aa;
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -196,8 +189,10 @@ const navegarA = (idDestino) => {
 
 .icono-red:hover {
     background-color: #0F8B58;
+    border-color: #0F8B58;
     color: #ffffff;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(15, 139, 88, 0.3);
 }
 
 /* === COLUMNA 2: NAVEGACIÓN === */
@@ -208,7 +203,7 @@ const navegarA = (idDestino) => {
 }
 
 .link-footer {
-    color: #94a3b8;
+    color: #a1a1aa;
     text-decoration: none;
     font-size: 0.95rem;
     display: flex;
@@ -245,13 +240,13 @@ const navegarA = (idDestino) => {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    color: #94a3b8;
+    color: #a1a1aa;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
 .lista-contacto a {
-    color: #94a3b8;
+    color: #a1a1aa;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -268,10 +263,10 @@ const navegarA = (idDestino) => {
 
 .btn-footer-cta {
     background-color: transparent;
-    color: #34d399;
-    border: 1px solid #34d399;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
+    color: #ffffff;
+    border: 1px solid #52525b;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -279,13 +274,13 @@ const navegarA = (idDestino) => {
 }
 
 .btn-footer-cta:hover {
-    background-color: #34d399;
-    color: #020617;
+    background-color: #27272a;
+    border-color: #a1a1aa;
 }
 
 /* === SECCIÓN INFERIOR (COPYRIGHT) === */
 .footer-inferior {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #27272a;
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -295,7 +290,7 @@ const navegarA = (idDestino) => {
 }
 
 .copyright {
-    color: #64748b;
+    color: #71717a;
     font-size: 0.85rem;
 }
 
@@ -306,7 +301,7 @@ const navegarA = (idDestino) => {
 }
 
 .links-legales a {
-    color: #64748b;
+    color: #71717a;
     text-decoration: none;
     font-size: 0.85rem;
     transition: color 0.3s ease;
@@ -317,7 +312,7 @@ const navegarA = (idDestino) => {
 }
 
 .separador {
-    color: #334155;
+    color: #3f3f46;
 }
 
 /* === RESPONSIVO === */

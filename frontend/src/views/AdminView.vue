@@ -46,7 +46,7 @@ const cargarProyectos = async () => {
     cargando.value = true;
     error.value = '';
     try {
-        const res = await fetch('http://127.0.0.1:8000/proyectos/');
+        const res = await fetch('api/proyectos/');
         if (!res.ok) throw new Error('Fallo en la comunicación con el servidor FastAPI.');
         proyectos.value = await res.json();
     } catch (err) {
@@ -78,7 +78,7 @@ const guardarProyecto = async () => {
             const formData = new FormData();
             formData.append('file', archivoSeleccionado.value);
 
-            const uploadRes = await fetch('http://127.0.0.1:8000/upload-imagen/', {
+            const uploadRes = await fetch('api/upload-imagen/', {
                 method: 'POST',
                 body: formData
             });
@@ -96,8 +96,8 @@ const guardarProyecto = async () => {
 
         // Fase 2: Ejecución de la operación CRUD.
         const url = modoEdicion.value 
-            ? `http://127.0.0.1:8000/proyectos/${proyectoActual.value.id}`
-            : 'http://127.0.0.1:8000/proyectos/';
+            ? `api/proyectos/${proyectoActual.value.id}`
+            : 'api/proyectos/';
         const metodo = modoEdicion.value ? 'PUT' : 'POST';
 
         const res = await fetch(url, {
@@ -125,7 +125,7 @@ const eliminarProyecto = async (id) => {
     if (confirm('¿Confirmas la eliminación permanente de este registro?')) {
         try {
             cargando.value = true;
-            await fetch(`http://127.0.0.1:8000/proyectos/${id}`, { method: 'DELETE' });
+            await fetch(`api/proyectos/${id}`, { method: 'DELETE' });
             cargarProyectos();
         } catch (err) {
             console.error("Fallo al ejecutar DELETE:", err);

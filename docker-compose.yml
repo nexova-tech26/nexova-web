@@ -8,11 +8,12 @@ services:
       - "8000:8000"
     restart: always
 
-  frontend:
+frontend:
     build: ./frontend
     container_name: nexova_frontend
     ports:
       - "80:80"
-    depends_on:
-      - backend
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     restart: always

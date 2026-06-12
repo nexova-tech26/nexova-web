@@ -21,28 +21,30 @@ const irAWhatsApp = (nombrePlan) => {
             
             <div class="encabezado-seccion" data-aos="fade-up">
                 <span class="etiqueta-nexova">Inversión Transparente</span>
-                <h2>Deja de ser invisible y empieza a ser elegido.</h2>
-                <p>Desarrollamos tu sitio web. Contamos con diferentes alternativas para tu negocio.</p>
+                <h2>Deja de ser invisible.<br>Empieza a ser elegido.</h2>
+                <p>Elige el plan que se adapte a tu etapa de crecimiento.</p>
             </div>
 
             <div class="grid-planes">
                 
-                <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- PLAN 1: NEX - START (Tarjeta Oscura) -->
+                <div class="plan-card oscura" data-aos="fade-up" data-aos-delay="100">
                     <div class="plan-header">
-                        <h3 id="plan-name"><strong>Nex - Start</strong></h3>
-                        <p class="plan-desc">Tu negocio merece estar en internet desde hoy. Sin complicaciones, sin esperas, con resultados reales desde la primera semana.</p>
-                        <p>Desde</p>
+                        <h3 class="plan-name">Nex - Start</h3>
+                        <p class="plan-desc">Tu negocio merece estar en internet desde hoy. Sin complicaciones y con resultados reales.</p>
+                        
+                        <span class="desde-texto">Inversión desde</span>
                         <div class="precio-caja">
                             <span class="moneda">COP</span>
                             <span class="precio">$500.000</span>
                         </div>
-                        <span style="color:darkgreen ; font-size: small;">Descuento de lanzamiento disponible*</span>
+                        <span class="nota-descuento">Descuento de lanzamiento disponible*</span>
                     </div>
             
                     <div class="plan-info">
                         <div class="info-item">
                             <i class="pi pi-bolt"></i>
-                            <span>Entrega: 1-2 semanas</span>
+                            <span>Entrega express: 1-2 semanas</span>
                         </div>
                         <div class="info-item">
                             <i class="pi pi-home"></i>
@@ -51,101 +53,99 @@ const irAWhatsApp = (nombrePlan) => {
                     </div>
 
                     <ul class="lista-features">
-                        <li><i class="pi pi-check"></i>Hasta 5 páginas</li>
-                        <li><i class="pi pi-check"></i>Se ve perfecto en celular y computador</li>
-                        <li><i class="pi pi-check"></i>Optimizado para aparecer en Google</li>
-                        <li><i class="pi pi-check"></i>Carga rápida, sin esperas que aburren</li>
-                        <li><i class="pi pi-check"></i>1 mes de soporte directo post-entrega</li>
-                        <li><i class="pi pi-check"></i>Integración con WhatsApp</li>
-                        <li><i class="pi pi-check"></i>Garantía en línea por 1 año</li>
+                        <li><i class="pi pi-check"></i> Hasta 5 páginas</li>
+                        <li><i class="pi pi-check"></i> Se ve perfecto en Smartphone y Pc</li>
+                        <li><i class="pi pi-check"></i> Optimización básica para Google (SEO)</li>
+                        <li><i class="pi pi-check"></i> Conexión directa con WhatsApp</li>
+                        <li><i class="pi pi-check"></i> 1 mes de soporte directo</li>
+                        <li><i class="pi pi-check"></i> Garantía técnica de 1 año</li>
                     </ul>
 
-                    <Button label="Empezar proyecto" 
-                        outlined 
-                        class="btn-plan w-full"
-                        @click="irAWhatsApp ('Nex - Start')"
-                        />
+                    <Button label="Elegir Nex - Start" 
+                        class="btn-plan btn-outline-dark w-full mt-auto"
+                        @click="irAWhatsApp('Nex - Start')"
+                    />
                 </div>
 
+                <!-- PLAN 2: NEX - PRO (Tarjeta Blanca Destacada) -->
                 <div class="plan-card destacado" data-aos="fade-up" data-aos-delay="200">
-                    <div class="badge-popular">RECOMENDADO</div>
+                    <div class="badge-popular">MÁS ELEGIDO</div>
                     
                     <div class="plan-header">
-                        <h3 id="plan-name"><strong>Nex - Pro</strong></h3>
-                        <p class="plan-desc">Para negocios que quieren una presencia digital que diferencie, que trabaje para ellos.</p>
-                        <span>Desde</span>
-
+                        <h3 class="plan-name text-verde-oscuro">Nex - Pro</h3>
+                        <p class="plan-desc texto-oscuro">Para negocios que quieren una presencia digital que los diferencie de su competencia local.</p>
+                        
+                        <span class="desde-texto texto-gris">Inversión desde</span>
                         <div class="precio-caja">
-                            <span class="moneda">COP</span>
+                            <span class="moneda texto-gris">COP</span>
                             <span class="precio text-verde">$1'300.000</span>
                         </div>
-                        <span style="color:darkgreen ; font-size: small;">Consulta por nuestras facilidades de pago*</span>
+                        <span class="nota-descuento text-verde-oscuro">Consulta nuestras facilidades de pago*</span>
                     </div>
 
                     <div class="plan-info">
                         <div class="info-item">
-                            <i class="pi pi-clock"></i>
-                            <span>Entrega: 3-6 semanas</span>
+                            <i class="pi pi-clock text-verde"></i>
+                            <span class="texto-oscuro">Entrega: 3-6 semanas</span>
                         </div>
                         <div class="info-item">
-                            <i class="pi pi-building"></i>
-                            <span>Para Startups y empresas en crecimiento</span>
+                            <i class="pi pi-building text-verde"></i>
+                            <span class="texto-oscuro">Para Startups y empresas establecidas</span>
                         </div>
                     </div>
 
                     <ul class="lista-features">
-                        <li><i class="pi pi-check text-verde"></i> Hasta 15 páginas, lo que tu marca necesite</li>
-                        <li><i class="pi pi-check text-verde"></i> Diseño personalizado que nadie más tiene</li>
-                        <li><i class="pi pi-check text-verde"></i> Animaciones e interacciones</li>
-                        <li><i class="pi pi-check text-verde"></i> SEO avanzado, más visibilidad en Google</li>
-                        <li><i class="pi pi-check text-verde"></i> Panel para editar tu contenido tú mismo</li>
-                        <li><i class="pi pi-check text-verde"></i> 3 meses de soporte post-entrega</li>
-                        <li><i class="pi pi-check text-verde"></i> Garantía en línea por 1 año</li>
-                        <li><i class="pi pi-check text-verde"></i> Integración con WhatsApp y redes sociales</li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro"><strong>Hasta 15 páginas</strong> estratégicas</span></li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro">Diseño UX/UI totalmente personalizado</span></li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro">Animaciones e interacciones premium</span></li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro">SEO Avanzado y Google Analytics</span></li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro">Panel autoadministrable (Edita tú mismo el contenido)</span></li>
+                        <li><i class="pi pi-check-circle text-verde"></i> <span class="texto-oscuro"><strong>3 meses</strong> de soporte post-entrega</span></li>
                     </ul>
 
                     <Button label="Elegir Nex - Pro" 
-                        class="btn-plan w-full"
-                        @click="irAWhatsApp ('Nex - Pro')"
-                         />
+                        class="btn-plan btn-primary-nexova w-full mt-auto"
+                        @click="irAWhatsApp('Nex - Pro')"
+                    />
                 </div>
 
-                <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
+                <!-- PLAN 3: NEX - BUSINESS (Tarjeta Oscura) -->
+                <div class="plan-card oscura" data-aos="fade-up" data-aos-delay="300">
                     <div class="plan-header">
-                        <h3 id="plan-name"><strong>Nex - Business</strong></h3>
-                        <p class="plan-desc">Cuando tu negocio necesita más que una web, necesita tecnología que se adapte a tu flujo de trabajo.</p>
-                        <div class="precio-caja">
-                            <span class="precio">Inversión a tu medida</span>
+                        <h3 class="plan-name">Nex - Business</h3>
+                        <p class="plan-desc">Cuando tu negocio necesita tecnología a medida y automatización de procesos internos.</p>
+                        
+                        <span class="desde-texto">Inversión</span>
+                        <div class="precio-caja" style="margin-top: 0.5rem;">
+                            <span class="precio" style="font-size: 1.6rem;">A tu medida</span>
                         </div>
+                        <span class="nota-descuento transparent-text">Consulta nuestras facilidades de pago*</span>
                     </div>
 
                     <div class="plan-info">
                         <div class="info-item">
-                            <i class="pi pi-clock"></i>
-                            <span>Entrega: Desde 4 semanas</span>
+                            <i class="pi pi-calendar-plus"></i>
+                            <span>Entrega: Según alcance</span>
                         </div>
                         <div class="info-item">
-                            <i class="pi pi-objects-column"></i>
-                            <span>Ingeniería exclusiva para tu negocio</span>
+                            <i class="pi pi-code"></i>
+                            <span>Ingeniería exclusiva corporativa</span>
                         </div>
                     </div>
 
                     <ul class="lista-features">
-                        <li><i class="pi pi-check"></i> Soluciones sin límites de alcance ni función</li>
-                        <li><i class="pi pi-check"></i> Automatización de procesos que hoy haces a mano</li>
-                        <li><i class="pi pi-check"></i> Portales y accesos exclusivos por usuario</li>
-                        <li><i class="pi pi-check"></i> Arquitectura escalable desde el inicio</li>
-                        <li><i class="pi pi-check"></i> Acompañamiento continuo post-lanzamiento.</li>
-                        <li><i class="pi pi-check"></i> Sesión de estrategia gratuita antes de cotizar</li>
-                        <li><i class="pi pi-check"></i> Propiedad total del código. Es tuyo para siempre</li>
+                        <li><i class="pi pi-check"></i> Soluciones 100% personalizadas</li>
+                        <li><i class="pi pi-check"></i> Automatización de procesos manuales</li>
+                        <li><i class="pi pi-check"></i> Bases de datos y portales de usuarios</li>
+                        <li><i class="pi pi-check"></i> Arquitectura en la nube escalable</li>
+                        <li><i class="pi pi-check"></i> Propiedad intelectual total del código</li>
+                        <li><i class="pi pi-check"></i> Acompañamiento continuo a largo plazo</li>
                     </ul>
 
-                    <Button label="Agendar llamada" 
-                        outlined 
-                        class="btn-plan w-full" 
-                        style="margin-top: auto;"
+                    <Button label="Agendar consultoría" 
+                        class="btn-plan btn-outline-dark w-full mt-auto" 
                         @click="scrollTo('contacto')"
-                         />
+                    />
                 </div>
 
             </div>
@@ -154,51 +154,19 @@ const irAWhatsApp = (nombrePlan) => {
 </template>
 
 <style scoped>
-/* ==========================================================================
-   VARIABLES DE TEMA (Preparación para Modo Claro / Oscuro)
-   ========================================================================== */
+/* 1. SECCIÓN PRINCIPAL: Premium Dark */
 .planes-wrapper {
-    /* Variables por defecto (Modo Claro) */
-    --bg-section: linear-gradient(
-        to bottom right,
-        #0f172a 0%,
-        #0c1a3a 40%,
-        #0e2a45 70%,
-        #0f172a 100%
-    );
-    --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-    
-    --text-main: #ffffff;
-    --text-main-card: #0f172a;
-
-    --text-muted: #64748b;
-    --text-light: #94a3b8;
-    
-    --divider-color: #f1f5f9;
-    
-    /* Variables de Tarjeta Destacada */
-    --highlight-bg: #f8fafc; /* Un gris/menta hiper sutil */
-    --highlight-border: #BCE4D3; /* Tu Verde Menta */
-    --highlight-badge: #0F8B58; /* Tu Verde Nexova */
-    
-    background-color: var(--bg-section);
-    padding: 6rem 1.5rem;
+    background-color: #09090b; /* Un negro/zinc muy sofisticado, adiós azul */
+    padding: 8rem 2rem;
     font-family: 'Inter', sans-serif;
 }
-
-/* NOTA: Cuando activemos el modo oscuro globalmente, 
-   solo añadiremos una clase que reemplace estas variables por colores oscuros,
-   y las tarjetas cambiarán solas sin tocar el resto del CSS.
-*/
 
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* === ENCABEZADO === */
+/* 2. ENCABEZADO */
 .encabezado-seccion {
     text-align: center;
     max-width: 700px;
@@ -206,172 +174,153 @@ const irAWhatsApp = (nombrePlan) => {
 }
 
 .etiqueta-nexova {
-    color: #0F8B58;
+    color: #34d399; /* Verde más vibrante para fondos oscuros */
     font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    display: block;
+    display: inline-block;
     margin-bottom: 1rem;
+    padding: 0.3rem 1rem;
+    background-color: rgba(52, 211, 153, 0.1);
+    border-radius: 20px;
 }
 
 .encabezado-seccion h2 {
-    font-size: 2.5rem;
-    color: var(--text-main);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #ffffff;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
 }
 
 .encabezado-seccion p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    font-size: 1.15rem;
+    color: #a1a1aa; /* Gris claro */
+    line-height: 1.6;
 }
 
-/* === CUADRÍCULA DE PLANES === */
+/* 3. GRID DE PLANES */
 .grid-planes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    align-items: stretch; /* Asegura que todas las tarjetas midan lo mismo */
+    align-items: stretch; 
 }
 
-/* === TARJETA BASE === */
+/* 4. TARJETAS BASE */
 .plan-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
     border-radius: 24px;
-    padding: 2.0rem 1.5rem;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
 }
 
-/* === TARJETA DESTACADA (POPULAR) === */
+/* TARJETAS OSCURAS (Start y Business) */
+.oscura {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    color: #ffffff;
+}
+
+.oscura:hover {
+    border-color: #3f3f46;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.oscura .plan-name { color: #ffffff; }
+.oscura .plan-desc { color: #a1a1aa; }
+.oscura .desde-texto, .oscura .moneda { color: #71717a; }
+.oscura .precio { color: #ffffff; }
+.oscura .nota-descuento { color: #34d399; font-size: 0.85rem; }
+.oscura .info-item i { color: #34d399; }
+.oscura .info-item span { color: #d4d4d8; }
+.oscura .lista-features i { color: #0F8B58; }
+.oscura .lista-features li { color: #d4d4d8; }
+
+/* TARJETA DESTACADA (Pro - Blanca) */
 .destacado {
-    position: relative;
-    overflow: visible !important; /* Mantiene la etiqueta visible */
-    z-index: 10;
-    
-    /* Estilos base de platino */
-    background: linear-gradient(165deg, #ffffff 0%, #f1f5f9 40%, #ecfdf5 100%);
-    border-radius: 24px;
-    border: 4px solid transparent;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    background-image: 
-        linear-gradient(to bottom, #ffffff, #f1f5f9), 
-        linear-gradient(135deg, #10b981, #ffffff, #059669);
-    
-    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
-    transition: all 0.4s ease;
-}
-
-/* EL TRUCO: El brillo ahora es interno y no se sale */
-.destacado::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px; /* Un poco menos que el padre por el grosor del borde */
-     
-    /* Gradiente de brillo con tamaño extra para animar el fondo, no el elemento */
-    background: linear-gradient(
-        120deg, 
-        transparent 30%, 
-        rgba(255, 255, 255, 0.6) 50%, 
-        transparent 70%
-    );
-    background-size: 300% 100%; /* Hacemos el gradiente más ancho que la tarjeta */
-    background-position: 150% 0;
-    
-    animation: shine-ultra 4s infinite;
-    z-index: 1;
-    pointer-events: none;
-    clip-path: inset(0 round 20px); /* Doble seguridad para el recorte */
-}
-
-@keyframes shine-ultra {
-    0% { background-position: 150% 0; }
-    30% { background-position: -150% 0; }
-    100% { background-position: -150% 0; }
+    background-color: #ffffff;
+    border: 2px solid #0F8B58;
+    box-shadow: 0 0 40px rgba(15, 139, 88, 0.15); /* Resplandor verde corporativo */
+    transform: scale(1.03); /* Ligeramente más grande que las otras */
+    z-index: 2;
 }
 
 .destacado:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 20px 50px rgba(15, 139, 88, 0.25);
 }
 
 .badge-popular {
     position: absolute;
-    top: -14px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--highlight-badge);
+    background: linear-gradient(135deg, #0F8B58 0%, #0b6b43 100%);
     color: white;
-    padding: 0.4rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 800;
     letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(15, 139, 88, 0.3);
 }
 
-/* === CABECERA DEL PLAN === */
+/* Colores utilitarios para la tarjeta clara */
+.texto-oscuro { color: #1e293b !important; }
+.texto-gris { color: #64748b !important; }
+.text-verde { color: #0F8B58 !important; }
+.text-verde-oscuro { color: #0b6b43 !important; }
+.transparent-text { color: transparent; user-select: none; } /* Oculta el texto pero mantiene el espacio */
+
+/* 5. ESTRUCTURA INTERNA */
 .plan-header {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--divider-color);
+    border-bottom: 1px solid rgba(161, 161, 170, 0.2);
 }
 
-.plan-header h3 {
-    font-size: 1.5rem;
-    color: var(--text-main-card);
-    margin: 0 0 0.5rem 0;
-    font-weight: 700;
+.plan-name {
+    font-size: 1.6rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 800;
 }
 
 .plan-desc {
-    color: var(--text-muted);
     font-size: 0.95rem;
+    line-height: 1.5;
     margin: 0 0 1.5rem 0;
-    min-height: 45px; /* Alinea los precios si las descripciones tienen distinto largo */
+    min-height: 42px; 
+}
+
+.desde-texto {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
 .precio-caja {
     display: flex;
-    align-items: justify;
-    gap: 2rem;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.moneda {
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 600;
-}
+.moneda { font-size: 1.2rem; font-weight: 700; }
+.precio { font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; }
 
-.precio {
-    font-size: 1.9rem;
-    font-weight: 800;
-    color: var(--text-main-card);
-}
-.text-verde {
-    color: #0F8B58 !important;
-}
-
-.desde {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-/* === INFO DE ENTREGA Y PÚBLICO === */
+/* 6. LISTAS E INFO */
 .plan-info {
     display: flex;
     flex-direction: column;
@@ -385,63 +334,81 @@ const irAWhatsApp = (nombrePlan) => {
     gap: 0.8rem;
 }
 
-.info-item i {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    margin-top: 0.2rem;
-}
+.info-item i { font-size: 1.2rem; margin-top: 0.1rem; }
+.info-item span { font-size: 0.95rem; font-weight: 500; }
 
-.info-item span {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-/* === LISTA DE CARACTERÍSTICAS === */
 .lista-features {
     list-style: none;
     padding: 0;
     margin: 0 0 2.5rem 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    flex-grow: 1; /* Empuja el botón hacia el fondo */
+    gap: 1.2rem;
 }
 
 .lista-features li {
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem;
-    color: var(--text-main-card);
+    gap: 0.8rem;
     font-size: 0.95rem;
     line-height: 1.4;
 }
 
-.lista-features i {
-    color: #34d399; /* Chulito (Check) genérico */
-    font-size: 1rem;
-    margin-top: 0.2rem;
-}
+.lista-features i { font-size: 1.1rem; margin-top: 0.1rem; }
 
-/* === BOTONES === */
-.w-full {
-    width: 100%;
-}
+/* 7. BOTONES */
+.w-full { width: 100%; }
+.mt-auto { margin-top: auto; } /* Empuja el botón siempre al fondo, alineándolos todos */
 
-.btn-plan {
-    padding: 1rem;
+:deep(.btn-plan) {
+    padding: 1.2rem;
     font-weight: 700;
     border-radius: 12px;
+    font-size: 1rem;
+    justify-content: center;
 }
 
-/* Responsivo para Tablets/Móviles */
-@media (max-width: 991px) {
+:deep(.btn-primary-nexova) {
+    background-color: #0F8B58;
+    border-color: #0F8B58;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+:deep(.btn-primary-nexova:hover) {
+    background-color: #0b6b43;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 139, 88, 0.4);
+}
+
+:deep(.btn-outline-dark) {
+    background-color: transparent;
+    border: 1px solid #52525b;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+:deep(.btn-outline-dark:hover) {
+    background-color: #27272a;
+    border-color: #a1a1aa;
+}
+
+/* 8. RESPONSIVO */
+@media (max-width: 1024px) {
     .destacado {
-        transform: scale(1); /* Quitamos el scale en pantallas pequeñas para que no se desborde */
+        transform: scale(1); /* Quitamos el scale en tablets/móviles */
     }
     .destacado:hover {
         transform: translateY(-5px);
     }
-    .encabezado-seccion h2 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    .planes-wrapper {
+        padding: 5rem 1.5rem;
+    }
+    .encabezado-seccion h2 {
+        font-size: 2.2rem;
+    }
 }
 </style>

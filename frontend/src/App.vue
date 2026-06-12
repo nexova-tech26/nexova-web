@@ -20,35 +20,64 @@ onUnmounted(() => {
     window.removeEventListener('scroll', checkScroll);
 });
 
+// Lógica para el clic en el Logo
+const handleLogoClick = () => {
+    if (route.path === '/') {
+        // Si ya está en el inicio, simplemente lo sube suavemente
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        // Si está en otra página, lo envía al inicio y luego lo sube
+        router.push('/').then(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+};
+
+// Lógica de navegación robusta para los enlaces del menú
+const scrollToSection = (id) => {
+    if (route.path !== '/') {
+        router.push('/').then(() => {
+            setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 100);
+        });
+    } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
 const items = ref([
-    { label: 'Inicio', icon: 'pi pi-home', command: () => document.getElementById('home-main')?.scrollIntoView({ behavior: 'smooth' }) },
-    { label: 'Nosotros', icon: 'pi pi-users', command: () => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' }) },
-    { label: 'Servicios', icon: 'pi pi-briefcase', command: () => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' }) },
-    { label: 'Planes', icon: 'pi pi-box', command: () => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' }) },
-    // { label: 'Portafolio', icon: 'pi pi-desktop', command: () => document.getElementById('portafolio')?.scrollIntoView({ behavior: 'smooth' }) },
-    { label: 'Contacto', icon: 'pi pi-envelope', command: () => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }) },
+    { label: 'Inicio', icon: 'pi pi-home', command: () => scrollToSection('home-main') },
+    { label: 'Nosotros', icon: 'pi pi-users', command: () => scrollToSection('nosotros') },
+    { label: 'Servicios', icon: 'pi pi-briefcase', command: () => scrollToSection('servicios') },
+    { label: 'Planes', icon: 'pi pi-box', command: () => scrollToSection('planes') },
+    { label: 'Contacto', icon: 'pi pi-envelope', command: () => scrollToSection('contacto') },
+    // { label: 'Portafolio', icon: 'pi pi-envelope', command: () => scrollToSection('portafolio') },
 ]);
 </script>
 
 <template>
-    <div :class="['header-dinamico', { 'header-scrolled': menuScrolled }]">
+    <header :class="['header-dinamico', { 'header-scrolled': menuScrolled }]">
         <Menubar :model="items" class="menu-corporativo">
             <template #start>
-                <div class="logo-container" @click="router.push('/')">
+                <!-- Aquí aplicamos la nueva función al hacer clic -->
+                <div class="logo-container" @click="handleLogoClick">
                     <img src="./assets/logo-nexova.png" alt="Nexova Tech" class="logo-img" />
                     <span class="marca-texto">Nexova Tech</span>
                 </div>
             </template>
         </Menubar>
-    </div>
+    </header>
     
-    <main>
+    <main class="contenedor-principal">
         <router-view></router-view>
     </main>
 </template>
 
 <style>
-/* === COMPORTAMIENTO GLOBAL === */
+/* === RESET Y COMPORTAMIENTO GLOBAL CRÍTICO === */
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+
 html {
     scroll-behavior: smooth; 
 }
@@ -57,6 +86,7 @@ body {
     background-color: #f8fafc;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
+    padding: 0;
     color: #1e293b;
     overflow-x: hidden;
 }
@@ -89,19 +119,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 !important;
-    width: 100%; /* Asegura que el menubar tome todo el espacio del contenedor */
+    width: 100%;
 }
 
-/* 
-   LA SOLUCIÓN: Empujar el menú hacia la derecha.
-   Esto afecta tanto a la lista de enlaces en PC como al botón de hamburguesa en móvil.
-*/
 .menu-corporativo .p-menubar-root-list,
 .menu-corporativo .p-menubar-button {
     margin-left: auto !important;
 }
 
-/* Hover de los links del menú */
 .p-menubar .p-menuitem-link {
     transition: color 0.3s ease !important;
 }
@@ -114,7 +139,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.8rem; /* Separación uniforme entre imagen y texto */
+    gap: 0.8rem;
     cursor: pointer;
 }
 
@@ -128,40 +153,39 @@ body {
     font-weight: 800;
     font-size: 1.3rem;
     color: #0f172a;
-    letter-spacing: -0.5px; /* Le da un toque corporativo más condensado */
+    letter-spacing: -0.5px;
 }
 
 .logo-container:hover .logo-img {
     transform: scale(1.05);
 }
 
-/* === SEPARACIÓN DEL CONTENIDO === */
-.espacio-superior {
-    padding-top: 7rem;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    border: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important; 
+/* === RESPONSIVIDAD DEL HEADER === */
+@media (max-width: 768px) {
+    .header-dinamico {
+        padding: 0.8rem 1rem;
+    }
+    .header-scrolled {
+        padding: 0.6rem 1rem;
+    }
+    .logo-img {
+        height: 32px;
+    }
+    .marca-texto {
+        font-size: 1.1rem;
+    }
 }
 
-/* CSS RESET */
+/* CSS RESET ADICIONAL */
 #app, 
-body, 
-html, 
 main, 
 .contenedor-principal {
-    border-left: none !important;
-    border-right: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-}
-
-#app {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
 }
 </style>
