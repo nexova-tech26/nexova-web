@@ -100,7 +100,7 @@ const scrollTo = (idDestino) => {
     background-color: rgba(15, 139, 88, 0.1); /* Fondo translúcido */
     color: #34d399; /* Verde claro vibrante */
     padding: 0.5rem 1.2rem;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 0.9rem;
     font-weight: 600;
     border: 1px solid rgba(15, 139, 88, 0.3);

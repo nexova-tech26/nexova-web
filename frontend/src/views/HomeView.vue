@@ -5,6 +5,7 @@
 import HeroSection from '../components/home/HeroSection.vue';
 import QuienesSomos from '../components/home/QuienesSomos.vue';
 import ServiciosSection from '../components/home/ServiciosSection.vue';
+import ClientesSection from '../components/home/ClientesSection.vue';
 // import PortafolioSection from '../components/home/PortafolioSection.vue';
 import ContactoSection from '../components/home/ContactoSection.vue';
 import PlanesSection from '../components/home/PlanesSection.vue';
@@ -17,6 +18,7 @@ import FooterSection from '../components/home/FooterSection.vue';
         <HeroSection />
         <QuienesSomos />
         <ServiciosSection />
+        <ClientesSection />
         <PlanesSection />
         <PortafolioSection />
         <ContactoSection />

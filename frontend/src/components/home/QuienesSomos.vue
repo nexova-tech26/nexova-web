@@ -96,16 +96,16 @@ const scrollTo = (idDestino) => {
 
 /* 3. TIPOGRAFÍA Y TEXTOS */
 .etiqueta-nexova {
-    color: #0F8B58; 
+    color: #0F8B58;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.3rem 0.8rem;
     background-color: rgba(15, 139, 88, 0.1);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .contenido-texto h2 {
@@ -155,7 +155,7 @@ const scrollTo = (idDestino) => {
     flex-shrink: 0;
     font-size: 0.8rem;
     margin-top: 0.1rem;
-    box-shadow: 0 4px 10px rgba(15, 139, 88, 0.3);
+    box-shadow: 0 15px 12px rgba(15, 139, 88, 0.3);
 }
 
 /* Ajuste del botón */

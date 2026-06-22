@@ -174,16 +174,16 @@ const irAWhatsApp = (nombrePlan) => {
 }
 
 .etiqueta-nexova {
-    color: #34d399; /* Verde más vibrante para fondos oscuros */
+    color: #34d399;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 1rem;
-    padding: 0.3rem 1rem;
-    background-color: rgba(52, 211, 153, 0.1);
-    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(15, 139, 88, 0.1);
+    border-radius: 10px;
 }
 
 .encabezado-seccion h2 {
